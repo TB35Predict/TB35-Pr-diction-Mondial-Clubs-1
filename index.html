@@ -3,119 +3,55 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TB35 Prédiction Mondial Club</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #1e1e1e;
-      padding: 20px;
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-      color: #00ff88;
-    }
-    nav {
-      background-color: #252525;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 20px;
-    }
-    h2 {
-      color: #00ff88;
-    }
-    form input, form textarea {
-      display: block;
-      margin: 10px 0;
-      width: 100%;
-      max-width: 400px;
-      padding: 8px;
-    }
-    form button {
-      padding: 10px 20px;
-      background-color: #00ff88;
-      border: none;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    footer {
-      background-color: #1e1e1e;
-      color: #888;
-      text-align: center;
-      padding: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    Bienvenue sur TB35 Prédiction Mondial Club
+    <div class="logo">TB35</div>
+    <nav class="menu" id="menu">
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Pronostic</a></li>
+        <li><a href="#">VIP</a></li>
+        <li><a href="#">À propos</a></li>
+        <li class="dropdown">
+          <a href="#">Bookmakers</a>
+          <ul class="submenu">
+            <li><span>Melbet - Code Promo TB35</span></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </header>
-  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#pronostic">Pronostic du jour</a>
-    <a href="#resultat">Résultat</a>
-    <a href="#vip">Pronostic VIP</a>
-    <a href="#contact">Contact</a>
-    <a href="#fun">Coupons Fun</a>
-  </nav>
-
-  <section id="accueil">
-    <h2>Présentation</h2>
-    <p>Nous donnons des pronostics pour la coupe du monde des clubs qui va débuter le 14 juin 2025. Les cotes varient entre 1.4 et 3. Un pronostic fun sera offert pour la journée 1 de la compétition.</p>
-    <p><strong>Presque tout ici est gratuit</strong></p>
-  </section>
-
-  <section id="pronostic">
-    <h2>Pronostic du jour</h2>
-    <p><em>Non publié pour le moment</em></p>
-  </section>
-
-  <section id="resultat">
-    <h2>Résultat</h2>
-    <p><em>Aucun pour l'instant</em></p>
-  </section>
-
-  <section id="vip">
-    <h2>Pronostic VIP</h2>
-    <p>Pour accéder au VIP, inscris-toi avec le code promo <strong>TB35</strong> sur Melbet, puis fournis une preuve (capture d'écran).</p>
-    <form action="mailto:tobybrian2024@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="nom" placeholder="Votre nom" required />
-      <input type="email" name="email" placeholder="Votre email" required />
-      <textarea name="message" placeholder="Ajoutez une remarque si nécessaire"></textarea>
-      <input type="file" name="preuve" />
-      <button type="submit">Envoyer la preuve</button>
-    </form>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>WhatsApp : <a href="https://wa.me/50942382404" style="color: #00ff88">+509 4238 2404</a></p>
-    <p>Telegram : <a href="https://t.me/mr_titan24" style="color: #00ff88">@mr_titan24</a></p>
-  </section>
-
-  <section id="fun">
-    <h2>Coupons Fun</h2>
-    <p><em>Non disponible pour le moment. Revenez le 13 juin 2025.</em></p>
-  </section>
-
-  <footer>
-    &copy; 2025 TB35 Prédiction Mondial Club — Tous droits réservés
-  </footer>
+  <main>
+    <h1>Bienvenue sur TB35 Prédiction Mondial Club</h1>
+    <p>Presque tout ici est gratuit</p>
+    <section class="box">
+      <h2>Pronostic du jour</h2>
+      <p>Non publié pour le moment</p>
+    </section>
+    <section class="box">
+      <h2>VIP</h2>
+      <p>Inscrivez-vous avec le code TB35 sur Melbet et envoyez une photo comme preuve à <strong>tobybrian2024@gmail.com</strong></p>
+    </section>
+    <section class="box">
+      <h2>Résultat</h2>
+      <p>Aucun pour l'instant</p>
+    </section>
+    <section class="box">
+      <h2>Contact</h2>
+      <p>WhatsApp : +50942382404</p>
+      <p>Telegram : @mr_titan24</p>
+    </section>
+  </main>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>

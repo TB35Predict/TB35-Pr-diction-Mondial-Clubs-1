@@ -1,0 +1,87 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: gold;
+}
+
+header {
+  background-color: #111;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu ul li {
+  position: relative;
+}
+
+.menu ul li .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: #222;
+  padding: 0.5rem;
+  z-index: 1;
+}
+
+.menu ul li:hover .submenu {
+  display: block;
+}
+
+.menu ul li a, .menu ul li span {
+  text-decoration: none;
+  color: gold;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+main {
+  padding: 2rem;
+}
+
+.box {
+  margin: 2rem 0;
+  background: #111;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
+
+  .menu.show ul {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
